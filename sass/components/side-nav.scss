@@ -2,7 +2,7 @@
   position: fixed;
   right: 5rem;
   top: 9rem;
-
+  z-index: 999;
   &__list{
     list-style: none;
   }

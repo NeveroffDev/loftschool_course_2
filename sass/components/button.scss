@@ -9,11 +9,18 @@
   color: $color-white;
   transition: background .3s ease;
 
-  &:hover{
-    background-color: $color-orange-hover;
-  }
-  &--order{
+
+  &--orange{
     background-color: $color-orange;
+    &:hover{
+      background-color: $color-orange-hover;
+    }
+  }
+  &--gray{
+    background-color: $color-dark-grey;
+    &:hover{
+      background-color: $color-dark-grey-hover;
+    }
   }
 }
 

@@ -46,11 +46,26 @@
     color: $color-yellow;
     margin-bottom: 2rem;
   }
-  &--sub{
+  &--gray{
+    color: $color-dark-grey;
+  }
+  &--white{
+    color: $color-white;
+  }
+  &--small{
+    font-size: 1.4rem;
+  }
+}
+
+.secondary-heading{
     font-family: Lifehack, sans-serif;
     font-weight: 400;
     color: $color-white;
     font-size: 6.5rem;
     line-height: 6rem;
+  &--small{
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    color: $color-dark-grey;
   }
 }

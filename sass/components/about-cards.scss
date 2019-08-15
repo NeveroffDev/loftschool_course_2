@@ -1,0 +1,25 @@
+.about-cards{
+
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+
+  }
+  &__item{
+    width: 30rem;
+    text-align: center;
+  }
+  &__icon{
+    margin-bottom: 3rem;
+  }
+  &__heading{
+    margin-bottom: 2rem;
+  }
+  &__desc{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: $color-dark-grey;
+    opacity: .8;
+  }
+}
