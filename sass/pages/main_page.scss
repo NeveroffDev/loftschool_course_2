@@ -2,10 +2,6 @@
   @include fullScreenSection('bg-intro-section.jpg');
 
   &__wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,10 +13,7 @@
   }
 
   &__scroll-down {
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    transform: translate(-50%);
+    margin-bottom: 4rem;
   }
 }
 
@@ -28,11 +21,8 @@
   @include fullScreenSection('bg-about-section.jpg');
 
   &__wrapper {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+
 
   }
 
