@@ -11,15 +11,15 @@
 <div class="wrapper">
     <aside class="side-nav">
         <ul class="side-nav__list">
-            <li class="side-nav__item side-nav__item--active"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item"></li>
-            <li class="side-nav__item "></li>
+            <li class="side-nav__item side-nav__item--active"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
+            <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
         </ul>
     </aside>
     <section class="intro-section">
@@ -39,7 +39,9 @@
                         <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
                     </ul>
                 </nav>
-                <a href="#" class="btn btn--orange">Заказать</a>
+                <div class="header__order-btn">
+                    <a href="#" class="btn btn--orange">Заказать</a>
+                </div>
             </header>
             <div class="intro-section__wrapper">
                 <div class="intro-section__image">
@@ -57,60 +59,49 @@
         </div>
     </section>
     <section class="about-section">
-        <div class="container">
-            <h2 class="about-section__heading">
-                <span class="primary-heading primary-heading--gray">Мы лучшие</span>
-            </h2>
 
-            <div class="about-cards">
-                <ul class="about-cards__list">
-                    <li class="about-cards__item">
-                        <div class="about-cards__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/meat.svg">
-                            </object>
-                        </div>
-                        <div class="about-cards__heading">
-                            <div class="secondary-heading secondary-heading--small">100% свежее мясо</div>
-                        </div>
-                        <div class="about-cards__desc">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
-                            неравномерен.
-                        </div>
-                    </li>
-                    <li class="about-cards__item">
-                        <div class="about-cards__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/hand.svg">
-                            </object>
-                        </div>
-                        <div class="about-cards__heading">
-                            <div class="secondary-heading secondary-heading--small">Ручная сборка</div>
-                        </div>
-                        <div class="about-cards__desc">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое
-                            полустишие притягивает сюжетный реформаторский пафос.
-                        </div>
-                    </li>
-                    <li class="about-cards__item">
-                        <div class="about-cards__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/natural.svg">
-                            </object>
-                        </div>
-                        <div class="about-cards__heading">
-                            <div class="secondary-heading secondary-heading--small">Натуральные
-                                ингредиенты
+        <div class="container">
+            <div class="about-section__wrapper">
+                <h2 class="about-section__heading">
+                    <span class="primary-heading primary-heading--gray">Мы лучшие</span>
+                </h2>
+
+                <div class="about-cards">
+                    <ul class="about-cards__list">
+                        <li class="about-cards__item">
+                            <div class="about-cards__icon">
+                                <object
+                                        type="image/svg+xml"
+                                        data="img/meat.svg">
+                                </object>
                             </div>
-                        </div>
-                        <div class="about-cards__desc">
-                            Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
-                        </div>
-                    </li>
-                </ul>
+                            <h3>100% свежее мясо</h3>
+                            <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
+                                неравномерен.</p>
+                        </li>
+                        <li class="about-cards__item">
+                            <div class="about-cards__icon">
+                                <object
+                                        type="image/svg+xml"
+                                        data="img/hand.svg">
+                                </object>
+                            </div>
+                            <h3>Ручная сборка</h3>
+                            <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое
+                                полустишие притягивает сюжетный реформаторский пафос.</p>
+                        </li>
+                        <li class="about-cards__item">
+                            <div class="about-cards__icon">
+                                <object
+                                        type="image/svg+xml"
+                                        data="img/natural.svg">
+                                </object>
+                            </div>
+                            <h3> Натуральные ингредиенты</h3>
+                            <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -118,8 +109,7 @@
         <div class="testimonials">
             <ul class="testimonials__list">
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-01.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--1"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -132,8 +122,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-02.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--2"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -146,8 +135,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-03.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--3"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -160,8 +148,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-04.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--4"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -174,8 +161,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-05.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--5"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -188,8 +174,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-06.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--6"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -202,8 +187,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-07.jpg" alt="user"
-                                                               class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--7"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
@@ -216,7 +200,7 @@
                     </div>
                 </li>
                 <li class="testimonials__item">
-                    <div class="testimonials__user-photo"><img src="./img/user-photo-08.jpg" alt="user" class="testimonials__img"></div>
+                    <div class="testimonials__user-photo testimonials__user-photo--8"></div>
                     <div class="testimonials__desc">
                         <div class="testimonials__heading">
                             <h3 class="primary-heading primary-heading--small primary-heading--white">Константин

@@ -1,7 +1,7 @@
-.intro-section{
+.intro-section {
   @include fullScreenSection('bg-intro-section.jpg');
 
-  &__wrapper{
+  &__wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,12 +11,12 @@
     justify-content: space-between;
   }
 
-  &__heading{
+  &__heading {
     padding-top: 5rem;
     padding-left: 1rem;
   }
 
-  &__scroll-down{
+  &__scroll-down {
     position: absolute;
     bottom: 4rem;
     left: 50%;
@@ -24,16 +24,25 @@
   }
 }
 
-.about-section{
+.about-section {
   @include fullScreenSection('bg-about-section.jpg');
-  padding-top: 12rem;
-  &__heading{
+
+  &__wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__heading {
     text-align: center;
     margin-bottom: 5rem;
   }
 }
 
-.section-testimonials{
+.section-testimonials {
   @include fullScreenSection;
 }
 

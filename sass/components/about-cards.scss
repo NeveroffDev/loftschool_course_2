@@ -1,25 +1,31 @@
-.about-cards{
+.about-cards {
 
-  &__list{
+  &__list {
     display: flex;
     justify-content: space-around;
     list-style: none;
 
   }
-  &__item{
+
+  &__item {
     width: 30rem;
     text-align: center;
-  }
-  &__icon{
-    margin-bottom: 3rem;
-  }
-  &__heading{
-    margin-bottom: 2rem;
-  }
-  &__desc{
-    font-size: 1.4rem;
-    line-height: 2.4rem;
     color: $color-dark-grey;
-    opacity: .8;
+    & h3 {
+      margin-bottom: 2rem;
+      font-family: Lifehack, sans-serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+    & p {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      opacity: .8;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 3rem;
   }
 }
