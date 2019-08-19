@@ -1,9 +1,13 @@
-@mixin fullScreenSection($image: null){
-  width: 100%;
-  height: 100vh;
-  min-height: 65rem;
+@mixin bgForSection($image: null) {
   @if $image != null {
     background: url("../img/#{$image}") center center no-repeat;
     background-size: cover;
   }
+}
+
+@mixin fontsProperties {
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

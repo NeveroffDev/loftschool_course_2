@@ -10,7 +10,6 @@
   &__item {
     position: relative;
 
-
     &:not(:last-child) {
       padding-right: 2rem;
       margin-right: 1.5rem;
@@ -27,11 +26,19 @@
       background-color: $color-white;
       border-radius: 50%;
     }
+
   }
+
 
   &__link {
     font-family: ubuntumedium, sans-serif;
     color: $color-white;
     text-decoration: none;
+    transition: opacity .3s ease;
+
+    &:hover {
+      opacity: .7;
+      cursor: pointer;
+    }
   }
 }
