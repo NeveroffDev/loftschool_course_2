@@ -26,7 +26,6 @@
 .about-section {
   @include bgForSection('bg-about-section.jpg');
 
-
   &__list {
     display: flex;
     justify-content: space-around;

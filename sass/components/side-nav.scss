@@ -14,8 +14,14 @@
     background-color: $color-white;
     margin-bottom: 1.5rem;
     border-radius: 50%;
+    transition: opacity .3s ease, transform .3s cubic-bezier(.43,-0.67,.66,1.98);
+    &:not(&--active):hover{
+      opacity: .5;
+      transform: scale(1.5);
+    }
 
     &--active{
+
       &:before{
         content: '';
         position: absolute;
@@ -29,6 +35,9 @@
       }
     }
   }
+  &__item--active &__link{
+    cursor: auto;
+  }
 
   &__link{
     display: block;
@@ -39,6 +48,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
 
 
 }
