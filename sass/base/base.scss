@@ -15,6 +15,7 @@ html{
 body{
   box-sizing: border-box;
   height: 100%;
+  @include fontsProperties;
 }
 .container{
   height: 100%;
