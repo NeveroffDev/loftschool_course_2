@@ -1,13 +1,10 @@
 @mixin bgForSection($image: null) {
   @if $image != null {
-    background: url("../img/#{$image}") center center no-repeat;
-    background-size: cover;
+    background: url("../img/#{$image}") center center / cover no-repeat;
   }
 }
 
 @mixin fontsProperties {
   font-weight: normal;
   font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

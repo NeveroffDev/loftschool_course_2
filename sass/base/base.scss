@@ -15,7 +15,8 @@ html{
 body{
   box-sizing: border-box;
   height: 100%;
-  @include fontsProperties;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .container{
   height: 100%;
