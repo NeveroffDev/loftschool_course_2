@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  //define what is 1 rem
+  font-size: 62.5%;
+  font-family: ubuntulight, sans-serif;
+  height: 100%;
+}
+
+body{
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container{
+  height: 100%;
+  width: 94rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  &--row{
+    flex-direction: row;
+  }
+}

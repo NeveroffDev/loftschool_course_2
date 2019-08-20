@@ -1,0 +1,67 @@
+.section{
+  width: 100%;
+  height: 100vh;
+  min-height: 65rem;
+}
+
+.intro-section {
+  @include bgForSection('bg-intro-section.jpg');
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading {
+    padding-top: 5rem;
+    padding-left: 1rem;
+  }
+
+  &__scroll-down {
+    margin-bottom: 4rem;
+  }
+}
+
+.about-section {
+  @include bgForSection('bg-about-section.jpg');
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  &__item {
+    width: 30rem;
+    text-align: center;
+    color: $color-dark-grey;
+
+    & h3 {
+      margin-bottom: 2rem;
+      font-family: Lifehack, sans-serif;
+      font-weight: 400;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+
+    & p {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      opacity: .8;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 3rem;
+  }
+
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+
+
+

@@ -1,0 +1,25 @@
+.btn{
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: ubuntumedium, sans-serif;
+  font-size: 1.3rem;
+  color: $color-white;
+  transition: background .3s ease;
+
+
+  &--orange{
+    background-color: $color-orange;
+    &:hover{
+      background-color: $color-orange-hover;
+    }
+  }
+  &--gray{
+    background-color: $color-dark-grey;
+    &:hover{
+      background-color: $color-dark-grey-hover;
+    }
+  }
+}
+

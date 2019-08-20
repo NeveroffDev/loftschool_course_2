@@ -1,0 +1,10 @@
+@mixin bgForSection($image: null) {
+  @if $image != null {
+    background: url("../img/#{$image}") center center / cover no-repeat;
+  }
+}
+
+@mixin fontsProperties {
+  font-weight: normal;
+  font-style: normal;
+}
