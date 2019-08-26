@@ -1,0 +1,62 @@
+.our-menu{
+
+  padding-top: 10rem;
+  &__heading{
+    color: $color-white;
+
+  }
+
+  &__accordeon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+  }
+
+  &__item{
+    display: flex;
+    height: 100%;
+  }
+  &__item--active &__link{
+    color: $color-yellow;
+  }
+  &__item--active &__desc{
+    width: 54rem;
+  }
+  &__name{
+    width: 8rem;
+    font-size: 4rem;
+    writing-mode: vertical-lr;
+    text-align: left;
+    padding: 4rem 0;
+    line-height: 8rem;
+    &--meat{
+      background: url("../img/our-menu-meat-item.jpg") center center / cover no-repeat;
+    }
+    &--veget{
+      background: url("../img/our-menu-vegetarian-item.jpg") center center / cover no-repeat;
+    }
+    &--diet{
+      background: url("../img/our-menu-dietic-item.jpg") center center / cover no-repeat;
+    }
+
+  }
+  &__link{
+    text-decoration: none;
+    color: $color-white;
+    display: block;
+    transform:rotate(180deg);
+  }
+  &__desc{
+    background-color: rgba($color-dark-grey, .9);
+    overflow: hidden;
+    width: 0;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: $color-white;
+  }
+  &__text{
+    padding: 5.5rem 3rem;
+  }
+}

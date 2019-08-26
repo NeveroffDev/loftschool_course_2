@@ -51,8 +51,10 @@
   font-weight: 400;
   &--main{
     display: block;
-    color: $color-yellow;
     margin-bottom: 2rem;
+  }
+  &--yellow{
+    color: $color-yellow;
   }
   &--gray{
     color: $color-dark-grey;

@@ -1,45 +1,42 @@
-.side-nav{
+.side-nav {
   position: fixed;
   right: 5rem;
   top: 9rem;
   z-index: 999;
-  &__list{
+
+  &__list {
     list-style: none;
   }
 
-  &__item{
+  &__item {
     position: relative;
-    width: .6rem;
-    height: .6rem;
-    background-color: $color-white;
-    margin-bottom: 1.5rem;
+    margin-bottom: .3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid transparent;
     border-radius: 50%;
-    transition: opacity .3s ease, transform .3s cubic-bezier(.43,-0.67,.66,1.98);
-    &:not(&--active):hover{
-      opacity: .5;
-      transform: scale(1.5);
+    transition: border-color .4s ease;
+    &--active, &:hover{
+      border-color: $color-white;
     }
-
-    &--active{
-
-      &:before{
+    &:before {
         content: '';
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 1.8rem;
-        height: 1.8rem;
-        border: 1px solid $color-white;
+        width: .6rem;
+        height: .6rem;
+        background-color: $color-white;
         border-radius: 50%;
-      }
     }
   }
-  &__item--active &__link{
+
+  &__item--active &__link {
     cursor: auto;
   }
 
-  &__link{
+  &__link {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
@@ -48,7 +45,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
 
 
 }

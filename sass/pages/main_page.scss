@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   min-height: 65rem;
+  position: relative;
 }
 
 .intro-section {
@@ -63,5 +64,10 @@
   }
 }
 
+.section-our-team{
+  @include bgForSection('our-team-bg.jpg');
+}
 
-
+.section-our-menu{
+  @include bgForSection('our-menu-bg.jpg');
+}
