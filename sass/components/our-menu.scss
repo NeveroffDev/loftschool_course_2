@@ -3,7 +3,6 @@
   padding-top: 10rem;
   &__heading{
     color: $color-white;
-
   }
 
   &__accordeon{
@@ -29,7 +28,6 @@
     font-size: 4rem;
     writing-mode: vertical-lr;
     text-align: left;
-    padding: 4rem 0;
     line-height: 8rem;
     &--meat{
       background: url("../img/our-menu-meat-item.jpg") center center / cover no-repeat;
@@ -47,6 +45,7 @@
     color: $color-white;
     display: block;
     transform:rotate(180deg);
+    padding: 4rem 0;
   }
   &__desc{
     background-color: rgba($color-dark-grey, .9);

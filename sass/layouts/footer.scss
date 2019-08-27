@@ -1,0 +1,11 @@
+.footer{
+  height: 6rem;
+  width: 100%;
+  background: url("../img/footer-bg.jpg") center center / cover no-repeat;
+  &__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -9,12 +9,15 @@
 </head>
 <body>
 <div class="wrapper">
-
     <section class="section intro-section">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
-                    <a href="./index.html" class="header__link"><img src="img/logo.png" alt="logo" class="logo"></a>
+                    <a href="./index.html" class="header__link">
+                        <svg class="header__logo-icon">
+                            <use xlink:href="./img/sprite.svg#icon-logo"/>
+                        </svg>
+                    </a>
                 </div>
                 <nav class="main-nav">
                     <ul class="main-nav__list">
@@ -41,12 +44,15 @@
                 </h1>
             </div>
             <div class="intro-section__scroll-down">
-                <a href="#"><img src="./img/arrow-scroll.png" alt="scroll down"></a>
+                <a class="intro-section__scroll-down-link" href="#">
+                    <svg class="intro-section__scroll-down-icon">
+                        <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
     <section class="section about-section">
-
         <div class="container container--row">
             <div class="about-section__wrapper">
                 <h2 class="about-section__heading">
@@ -55,150 +61,31 @@
 
                 <ul class="about-section__list">
                     <li class="about-section__item">
-                        <div class="about-section__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/meat.svg">
-                            </object>
-                        </div>
+                        <svg class="about-section__icon">
+                            <use xlink:href="./img/sprite.svg#icon-meat"/>
+                        </svg>
                         <h3>100% свежее мясо</h3>
                         <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб
                             неравномерен.</p>
                     </li>
                     <li class="about-section__item">
-                        <div class="about-section__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/hand.svg">
-                            </object>
-                        </div>
+                        <svg class="about-section__icon">
+                            <use xlink:href="./img/sprite.svg#icon-hand"/>
+                        </svg>
                         <h3>Ручная сборка</h3>
                         <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое
                             полустишие притягивает сюжетный реформаторский пафос.</p>
                     </li>
                     <li class="about-section__item">
-                        <div class="about-section__icon">
-                            <object
-                                    type="image/svg+xml"
-                                    data="img/natural.svg">
-                            </object>
-                        </div>
+                        <svg class="about-section__icon">
+                            <use xlink:href="./img/sprite.svg#icon-natural"/>
+                        </svg>
                         <h3> Натуральные ингредиенты</h3>
                         <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
                     </li>
                 </ul>
 
             </div>
-        </div>
-    </section>
-    <section class="section section-testimonials">
-        <div class="testimonials">
-            <ul class="testimonials__list">
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--1"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--2"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--3"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--4"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--5"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--6"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--7"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="testimonials__item">
-                    <div class="testimonials__user-photo testimonials__user-photo--8"></div>
-                    <div class="testimonials__desc">
-                        <div class="testimonials__heading">
-                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
-                                Спилберг</h3></div>
-                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
-                            сочной, а сыр таким расплавленным.
-                        </div>
-                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
-                    </div>
-                </li>
-            </ul>
         </div>
     </section>
     <section class="section section-our-team">
@@ -342,6 +229,245 @@
                 </ul>
             </div>
         </div>
+    </section>
+    <section class="section section-testimonials">
+        <div class="testimonials">
+            <ul class="testimonials__list">
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--1"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--2"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--3"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--4"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--5"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--6"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--7"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+                <li class="testimonials__item">
+                    <div class="testimonials__user-photo testimonials__user-photo--8"></div>
+                    <div class="testimonials__desc">
+                        <div class="testimonials__heading">
+                            <h3 class="primary-heading primary-heading--small primary-heading--white">Константин
+                                Спилберг</h3></div>
+                        <div class="testimonials__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                            сочной, а сыр таким расплавленным.
+                        </div>
+                        <div class="testimonials__button"><a href="#" class="btn btn btn--gray">Подробнее</a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="section section-order">
+        <div class="container container--row">
+            <div class="form">
+                <div class="form__heading primary-heading">Закажите доставку</div>
+                <form action="#" class="form__form-elem">
+                    <div class="form__column">
+                        <div class="form__row">
+                            <label class="form__block">
+                                <div class="form__label-text">Имя</div>
+                                <input class="form__input" type="text" id="name">
+                            </label>
+                            <label class="form__block">
+                                <div class="form__label-text">Телефон</div>
+                                <input class="form__input" type="text" id="phone">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__block">
+                                <div class="form__label-text">Улица</div>
+                                <input class="form__input" type="text" id="street">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__block">
+                                <div class="form__label-text">Дом</div>
+                                <input class="form__input" type="text" id="house">
+                            </label>
+                            <label class="form__block">
+                                <div class="form__label-text">Корпус</div>
+                                <input class="form__input" type="text" id="block">
+                            </label>
+                            <label class="form__block">
+                                <div class="form__label-text">Квартира</div>
+                                <input class="form__input" type="text" id="flat">
+                            </label>
+                            <label class="form__block">
+                                <div class="form__label-text">Этаж</div>
+                                <input class="form__input" type="text" id="flor">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__column">
+                        <div class="form__row">
+                            <label class="form__block">
+                                <div class="form__label-text">Комментарий</div>
+                                <textarea class="form__input form__input--textarea" type="text" id="comment"></textarea>
+                            </label>
+                        </div>
+                        <div class="form__row form__row--no-gap">
+                            <label class="form__block">
+                                <input class="form__input-radio form__label-text--radio" type="radio" id="change"
+                                       name="pay">
+                                <span class="form__label-text">Потребуется сдача</span>
+                            </label>
+                            <label class="form__block">
+                                <input class="form__input-radio" type="radio" id="card" name="pay">
+                                <span class="form__label-text form__label-text--radio">Оплата по карте</span>
+                            </label>
+                        </div>
+                        <div class="form__row form__row--no-gap">
+                            <label class="form__block">
+
+                                <input class="form__input-checkbox" type="checkbox" id="noCallback" name="pay">
+                                <svg class="form__checkbox-icon">
+                                    <use xlink:href="./img/sprite.svg#icon-checkbox"/>
+                                </svg>
+                                <span class="form__label-text">Не перезванивать</span>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <input class="form__input-sub btn btn--orange" type="submit" value="Заказать">
+                            <input class="form__input-reset btn btn--transparent" type="reset" value="Очистить">
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <section class="section section-map">
+        <div class="section-map__wrapper">
+            <img src="./img/map.jpg" class="section-map__map" alt="">
+        </div>
+        <footer class="footer">
+            <div class="container container--row">
+                <div class="footer__wrapper">
+                    <div class="footer__column">
+                        <div class="contacts">
+                            <div class="contacts__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                            <a href="tel:+78123771377" class="contacts__phone">
+                                <svg class="contacts__phone-icon">
+                                    <use xlink:href="./img/sprite.svg#icon-phone"/>
+                                </svg>
+                                +7 (812) 377-13-77</a>
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <div class="social">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#icon-vk"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#icon-fb"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#icon-inst"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="./img/sprite.svg#icon-twitter"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
     </section>
 </div>
 <aside class="side-nav">

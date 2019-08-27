@@ -1,0 +1,150 @@
+.form {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  width: 100%;
+
+  &__form-elem {
+    display: flex;
+  }
+
+  &__heading {
+    color: $color-yellow;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  &__column {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 1.8rem;
+    }
+
+    &--no-gap {
+      margin-bottom: 1rem !important;
+      display: block;
+    }
+  }
+
+  &__block {
+    flex: 1;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__label-text {
+    color: $color-white;
+    backface-visibility: hidden;
+  }
+
+  &__input {
+    width: 100%;
+    padding: .8rem 2rem;
+    background-color: $color-white;
+    outline: none;
+    border: 2px solid transparent;
+    transition: border .3s ease;
+    border-radius: .3rem;
+
+    &:focus {
+      border: 2px solid $color-yellow;
+    }
+  }
+
+  &__input--textarea {
+    height: 11.5rem;
+    resize: none;
+  }
+
+  &__input-sub {
+    margin-right: 1rem;
+  }
+
+  &__input-reset {
+    text-transform: none;
+    font-family: ubuntulight, sans-serif;
+  }
+
+  &__input-radio {
+    margin-right: 1rem;
+    visibility: hidden;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      height: 1.6rem;
+      width: 1.6rem;
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background-color: $color-white;
+    }
+    &:after {
+      content: '';
+      height: .8rem;
+      width: .8rem;
+      visibility: visible;
+      position: absolute;
+      opacity: 0;
+      top: .4rem;
+      left: .4rem;
+      border-radius: 50%;
+      background-color: $color-orange;
+      transform: scale(0);
+
+      transition: all .4s cubic-bezier(.33,-0.4,.50,2.5);
+    }
+    &:checked:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  &__input-checkbox {
+    margin-right: 1rem;
+    visibility: hidden;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      height: 1.6rem;
+      width: 1.6rem;
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: .2rem;
+      background-color: $color-white;
+    }
+  }
+  &__checkbox-icon{
+    cursor: pointer;
+    width: 1.3rem;
+    height: 1.3rem;
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    z-index: 1;
+    opacity: 0;
+    transform: scale(0);
+    transition: all .4s cubic-bezier(.33,-0.4,.50,2.5);
+  }
+  &__input-checkbox:checked ~ &__checkbox-icon{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+

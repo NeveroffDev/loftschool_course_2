@@ -1,0 +1,13 @@
+.contacts{
+  color: $color-white;
+  &__phone{
+    font-family: ubuntubold, sans-serif;
+    color: $color-orange;
+    text-decoration: none;
+  }
+  &__phone-icon{
+    width: 1rem;
+    height: 1rem;
+    margin-right: .3rem;
+  }
+}

@@ -1,4 +1,5 @@
 .btn{
+  border: none;
   padding: 1rem 1.5rem;
   border-radius: .5rem;
   text-transform: uppercase;
@@ -6,8 +7,9 @@
   font-family: ubuntumedium, sans-serif;
   font-size: 1.3rem;
   color: $color-white;
-  transition: background .3s ease;
-
+  transition: all .3s ease;
+  outline: none;
+  cursor: pointer;
 
   &--orange{
     background-color: $color-orange;
@@ -19,6 +21,13 @@
     background-color: $color-dark-grey;
     &:hover{
       background-color: $color-dark-grey-hover;
+    }
+  }
+  &--transparent{
+    background-color: transparent;
+    border: .1rem solid transparent;
+    &:hover{
+      border: .1rem solid $color-white;
     }
   }
 }

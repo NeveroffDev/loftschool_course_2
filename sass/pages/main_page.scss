@@ -22,6 +22,18 @@
   &__scroll-down {
     margin-bottom: 4rem;
   }
+  &__scroll-down-link{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__scroll-down-icon{
+    width: 3rem;
+    height: 3rem;
+  }
+
+
 }
 
 .about-section {
@@ -55,6 +67,8 @@
 
   &__icon {
     margin-bottom: 3rem;
+    width: 9rem;
+    height: 9rem;
   }
 
 
@@ -70,4 +84,17 @@
 
 .section-our-menu{
   @include bgForSection('our-menu-bg.jpg');
+}
+
+.section-order{
+  @include bgForSection('order-section-bg.jpg');
+}
+.section-map{
+  &__wrapper{
+    overflow: hidden;
+    height: calc(100vh - 6rem);
+  }
+  &__map{
+    width: 100%;
+  }
 }
