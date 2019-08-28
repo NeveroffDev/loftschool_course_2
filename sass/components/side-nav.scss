@@ -1,4 +1,7 @@
 .side-nav {
+  @include tablet{
+    display: none;
+  }
   position: fixed;
   right: 5rem;
   top: 9rem;

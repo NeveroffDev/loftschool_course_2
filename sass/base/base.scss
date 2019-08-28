@@ -8,6 +8,13 @@
 html{
   //define what is 1 rem
   font-size: 62.5%;
+
+  @include tablet{
+    font-size: 56.25%;
+  }
+  @include phone{
+    font-size: 50%;
+  }
   font-family: ubuntulight, sans-serif;
   height: 100%;
 }
@@ -23,7 +30,8 @@ body{
 .container{
 
   height: 100%;
-  width: 94rem;
+  width: 95%;
+  max-width: 94rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

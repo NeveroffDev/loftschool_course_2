@@ -30,16 +30,22 @@
                         <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="header__order-btn">
-                    <a href="#" class="btn btn--orange">Заказать</a>
+                <div class="header__buttons">
+                    <div class="header__order-btn">
+                        <a href="#" class="btn btn--orange">Заказать</a>
+                    </div>
+                    <button class="burger">
+                        <span class="burger__icon"></span>
+                    </button>
                 </div>
+
             </header>
             <div class="intro-section__wrapper">
-                <div class="intro-section__image">
-                    <img src="img/burger.png" alt="burger">
+                <div class="intro-section__image-box">
+                    <img class="intro-section__image" src="img/burger.png" alt="burger">
                 </div>
                 <h1 class="intro-section__heading">
-                    <span class="primary-heading primary-heading--main primary-heading--yellow">Мы делаем</span>
+                    <span class="primary-heading primary-heading--main primary-heading--yellow intro-section__heading--main">Мы делаем</span>
                     <span class="secondary-heading">натуральные бургеры</span>
                 </h1>
             </div>
@@ -409,7 +415,7 @@
                                 <span class="form__label-text">Не перезванивать</span>
                             </label>
                         </div>
-                        <div class="form__row">
+                        <div class="form__row form__row--btns">
                             <input class="form__input-sub btn btn--orange" type="submit" value="Заказать">
                             <input class="form__input-reset btn btn--transparent" type="reset" value="Очистить">
                         </div>

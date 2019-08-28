@@ -1,16 +1,18 @@
 .our-menu{
-
+  width: 100%;
   padding-top: 10rem;
   &__heading{
     color: $color-white;
   }
 
   &__accordeon{
+    width: 100%;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     height: 100vh;
     display: flex;
+    justify-content: flex-end;
   }
 
   &__item{
@@ -22,6 +24,9 @@
   }
   &__item--active &__desc{
     width: 54rem;
+    @include tablet{
+      width: 35rem;
+    }
   }
   &__name{
     width: 8rem;

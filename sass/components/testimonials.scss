@@ -9,6 +9,9 @@
     width: 25%;
     background-color: $color-gray;
     overflow: hidden;
+    @include tablet{
+      width: 50%;
+    }
   }
   &__user-photo{
     height: 50vh;
@@ -20,6 +23,10 @@
         background: url("../img/user-photo-0#{$i}.jpg") center center no-repeat;
         background-size: cover;
       }
+    }
+
+    @include tablet{
+      height: 25vh;
     }
 
   }
@@ -39,11 +46,20 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
     transition: all .5s ease;
+    @include tablet{
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__item:hover &__desc{
     opacity: 1;
     top: 5rem;
+    @include tablet{
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   &__item:hover &__user-photo{
     opacity: 0.5;
@@ -51,6 +67,9 @@
 
   &__heading{
     margin-bottom: 2.5rem;
+    @include tablet{
+      margin-bottom: 1rem;
+    }
   }
   &__text{
     margin-bottom: 1.5rem;
