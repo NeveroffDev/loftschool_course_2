@@ -44,6 +44,9 @@ body{
   &--row{
     flex-direction: row;
   }
+  @include phone{
+    width: 90%;
+  }
 }
 
 ul{

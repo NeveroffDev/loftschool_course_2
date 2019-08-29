@@ -1,5 +1,9 @@
 .contacts{
   color: $color-white;
+  @include phone{
+    margin-bottom: 1rem;
+  }
+
   &__phone{
     font-family: ubuntubold, sans-serif;
     color: $color-orange;

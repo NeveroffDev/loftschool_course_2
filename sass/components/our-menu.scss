@@ -25,7 +25,10 @@
   &__item--active &__desc{
     width: 54rem;
     @include tablet{
-      width: 35rem;
+      width: 30rem;
+    }
+    @include phone{
+      width: 21rem;
     }
   }
   &__name{
@@ -34,6 +37,10 @@
     writing-mode: vertical-lr;
     text-align: left;
     line-height: 8rem;
+    @include phone{
+      width: 6.5rem;
+      line-height: 6.5rem;
+    }
     &--meat{
       background: url("../img/our-menu-meat-item.jpg") center center / cover no-repeat;
     }
@@ -44,6 +51,7 @@
       background: url("../img/our-menu-dietic-item.jpg") center center / cover no-repeat;
     }
 
+
   }
   &__link{
     text-decoration: none;
@@ -51,6 +59,9 @@
     display: block;
     transform:rotate(180deg);
     padding: 4rem 0;
+    @include phone{
+      padding: 2rem 0;
+    }
   }
   &__desc{
     background-color: rgba($color-dark-grey, .9);
@@ -62,5 +73,12 @@
   }
   &__text{
     padding: 5.5rem 3rem;
+    @include tablet{
+      padding: 2rem;
+    }
+    @include phone{
+      padding: 2rem;
+    }
+
   }
 }

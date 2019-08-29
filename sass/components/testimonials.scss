@@ -50,6 +50,8 @@
       text-align: center;
       left: 50%;
       transform: translateX(-50%);
+      font-size: 1.2rem;
+      line-height: 2rem;
     }
   }
 
@@ -70,12 +72,32 @@
     @include tablet{
       margin-bottom: 1rem;
     }
+    @include phone{
+      margin-bottom: 2rem;
+    }
   }
   &__text{
     margin-bottom: 1.5rem;
+    @include phone{
+      display: none;
+    }
   }
   &__button{
     display: block;
+    @include phone{
+
+    }
+  }
+  &__button-all{
+    @include phone{
+      display: none;
+    }
+  }
+  &__button-phone{
+    display: none;
+    @include phone{
+      display: inline;
+    }
   }
 
 }
