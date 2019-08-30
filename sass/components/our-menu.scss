@@ -1,0 +1,84 @@
+.our-menu{
+  width: 100%;
+  padding-top: 10rem;
+  &__heading{
+    color: $color-white;
+  }
+
+  &__accordeon{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__item{
+    display: flex;
+    height: 100%;
+  }
+  &__item--active &__link{
+    color: $color-yellow;
+  }
+  &__item--active &__desc{
+    width: 54rem;
+    @include tablet{
+      width: 30rem;
+    }
+    @include phone{
+      width: 21rem;
+    }
+  }
+  &__name{
+    width: 8rem;
+    font-size: 4rem;
+    writing-mode: vertical-lr;
+    text-align: left;
+    line-height: 8rem;
+    @include phone{
+      width: 6.5rem;
+      line-height: 6.5rem;
+    }
+    &--meat{
+      background: url("../img/our-menu-meat-item.jpg") center center / cover no-repeat;
+    }
+    &--veget{
+      background: url("../img/our-menu-vegetarian-item.jpg") center center / cover no-repeat;
+    }
+    &--diet{
+      background: url("../img/our-menu-dietic-item.jpg") center center / cover no-repeat;
+    }
+
+
+  }
+  &__link{
+    text-decoration: none;
+    color: $color-white;
+    display: block;
+    transform:rotate(180deg);
+    padding: 4rem 0;
+    @include phone{
+      padding: 2rem 0;
+    }
+  }
+  &__desc{
+    background-color: rgba($color-dark-grey, .9);
+    overflow: hidden;
+    width: 0;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: $color-white;
+  }
+  &__text{
+    padding: 5.5rem 3rem;
+    @include tablet{
+      padding: 2rem;
+    }
+    @include phone{
+      padding: 2rem;
+    }
+
+  }
+}

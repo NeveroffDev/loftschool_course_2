@@ -1,4 +1,7 @@
 .main-nav {
+  @include tablet{
+    display: none;
+  }
   font-size: 1.3rem;
   text-transform: uppercase;
 
@@ -13,6 +16,11 @@
     &:not(:last-child) {
       padding-right: 2rem;
       margin-right: 1.5rem;
+      @include mediaFix(995px){
+        padding: 0;
+      }
+
+
     }
 
     &:not(:last-child):after {
@@ -25,6 +33,9 @@
       transform: translateY(-50%);
       background-color: $color-white;
       border-radius: 50%;
+      @include mediaFix(995px){
+        display: none;
+      }
     }
 
   }
@@ -35,7 +46,9 @@
     color: $color-white;
     text-decoration: none;
     transition: opacity .3s ease;
-
+    @include mediaFix(870px){
+      font-size: 1.2rem;
+    }
     &:hover {
       opacity: .7;
       cursor: pointer;

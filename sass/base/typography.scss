@@ -48,11 +48,18 @@
 .primary-heading{
   font-family: Gagalin, sans-serif;
   font-size: 7.2rem;
+  line-height: 7rem;
   font-weight: 400;
+  @include phone{
+    line-height: 6rem;
+    font-size: 5.5rem;
+  }
   &--main{
     display: block;
-    color: $color-yellow;
     margin-bottom: 2rem;
+  }
+  &--yellow{
+    color: $color-yellow;
   }
   &--gray{
     color: $color-dark-grey;
@@ -62,7 +69,14 @@
   }
   &--small{
     font-size: 1.4rem;
+    line-height: 2rem;
+    @include phone{
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
   }
+
+
 }
 
 .secondary-heading{
@@ -71,9 +85,14 @@
     color: $color-white;
     font-size: 6.5rem;
     line-height: 6rem;
+  @include phone{
+    font-size: 5.5rem;
+  }
+
   &--small{
     font-size: 2.4rem;
     line-height: 2.8rem;
     color: $color-dark-grey;
   }
+
 }

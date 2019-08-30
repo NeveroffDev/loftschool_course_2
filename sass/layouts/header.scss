@@ -1,12 +1,28 @@
 .header{
+  width: 100%;
   height: 9rem;
   display: flex;
   align-items: center;
-
+  justify-content: space-between;
   &__logo{
     margin-right: 7rem;
+    @include mediaFix(850px){
+      margin-right: 2rem;
+    }
+  }
+  &__buttons{
+    display: flex;
+    align-items: center;
+  }
+  &__logo-icon{
+    width: 8rem;
+    height: 8rem;
   }
   &__order-btn{
     margin-left: 1rem;
+    @include tablet{
+      margin-left: 0;
+      margin-right: 2rem;
+    }
   }
 }
