@@ -67,6 +67,9 @@
   &--white{
     color: $color-white;
   }
+  &--orange{
+    color: $color-orange;
+  }
   &--small{
     font-size: 1.4rem;
     line-height: 2rem;
@@ -74,6 +77,10 @@
       font-size: 2.4rem;
       line-height: 2.8rem;
     }
+  }
+  &--middle{
+    font-size: 3rem;
+    line-height: 3rem;
   }
 
 

@@ -1,0 +1,28 @@
+.close {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  @include tablet {
+    display: initial;
+  }
+
+  &__btn {
+    width: 2.5rem;
+    height: .4rem;
+    border-radius: .2rem;
+    background-color: $color-orange-light;
+    transform: rotate(45deg);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 2.5rem;
+      height: .4rem;
+      border-radius: .2rem;
+      background-color: $color-orange-light;
+      transform: rotate(-90deg);
+    }
+  }
+}
