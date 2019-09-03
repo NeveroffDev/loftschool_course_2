@@ -6,6 +6,24 @@
     display: initial;
   }
 
+  &--big{
+    width: 4rem;
+    height: 4rem;
+  }
+  &--big &__btn{
+    width: 4rem;
+    &:before{
+      width: 4rem;
+    }
+  }
+
+  &--white &__btn{
+    background-color: $color-white;
+    &:before{
+      background-color: $color-white;
+    }
+  }
+
   &__btn {
     width: 2.5rem;
     height: .4rem;
@@ -24,5 +42,7 @@
       background-color: $color-orange-light;
       transform: rotate(-90deg);
     }
+
   }
+
 }

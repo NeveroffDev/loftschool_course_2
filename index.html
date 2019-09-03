@@ -34,7 +34,7 @@
                     <div class="header__order-btn">
                         <a href="#" class="btn btn--orange">Заказать</a>
                     </div>
-                    <button class="burger">
+                    <button id="burger-menu" class="burger">
                         <span class="burger__icon"></span>
                     </button>
                 </div>
@@ -615,20 +615,21 @@
         </footer>
     </section>
 </div>
-<!--<nav class="fullscreen-menu">-->
-<!--    <ul class="fullscreen-menu__list">-->
-<!--        <li class="fullscreen-menu__item">-->
-<!--            <a href="#" class="fullscreen-menu__link"></a>-->
-<!--        </li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Бургеры</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Команда</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Меню</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Отзывы</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Как мы работаем</a></li>-->
-<!--        <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>-->
-<!--    </ul>-->
-<!--</nav>-->
+<nav id="full-screen-menu" class="fullscreen-menu">
+    <ul class="fullscreen-menu__list">
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">О нас</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Бургеры</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Команда</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Меню</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Отзывы</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Как мы работаем</a></li>
+        <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Контакты</a></li>
+    </ul>
+    <button id="full-screen-close" class="fullscreen-menu__close close close--big close--white">
+        <div class="close__btn">
+        </div>
+    </button>
+</nav>
 <aside class="side-nav">
     <ul class="side-nav__list">
         <li class="side-nav__item side-nav__item--active"><a href="#" class="side-nav__link"></a></li>
@@ -642,5 +643,6 @@
         <li class="side-nav__item"><a href="#" class="side-nav__link"></a></li>
     </ul>
 </aside>
+<script src="js/burger-menu.js"></script>
 </body>
 </html>
