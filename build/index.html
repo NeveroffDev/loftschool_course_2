@@ -102,12 +102,13 @@
         <div class="slider-section__wrapper">
             <div class="slider">
                 <div class="slider__wrapper">
-                    <button class="slider__arrow">
-                        <svg class="slider__arrow-icon slider__arrow-icon--left">
-                            <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
-                        </svg>
-                    </button>
+
                     <div class="container container--row">
+                        <button class="slider__arrow">
+                            <svg class="slider__arrow-icon slider__arrow-icon--left">
+                                <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
+                            </svg>
+                        </button>
                         <ul class="slider__list">
                             <li class="slider__item">
                                 <div class="slider__item-right">
@@ -207,12 +208,13 @@
                                 </div>
                             </li>
                         </ul>
+                        <button class="slider__arrow">
+                            <svg class="slider__arrow-icon slider__arrow-icon--right">
+                                <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="slider__arrow">
-                        <svg class="slider__arrow-icon slider__arrow-icon--right">
-                            <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
-                        </svg>
-                    </button>
+
                 </div>
             </div>
         </div>
@@ -616,6 +618,13 @@
     </section>
 </div>
 <nav id="full-screen-menu" class="fullscreen-menu">
+    <div class="fullscreen-menu__logo">
+        <a href="./index.html">
+            <svg class="fullscreen-menu__logo-icon">
+                <use xlink:href="./img/sprite.svg#icon-logo"/>
+            </svg>
+        </a>
+    </div>
     <ul class="fullscreen-menu__list">
         <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">О нас</a></li>
         <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Бургеры</a></li>

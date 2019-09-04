@@ -40,9 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include mediaFix(860px){
-      height: 60vh;
-    }
+
     @include tablet{
       flex-direction: column;
       justify-content: center;
@@ -88,6 +86,9 @@
     transition: background-color .4s ease;
     &:hover{
       background-color: $color-orange;
+    }
+    @include phone{
+      left: -2rem;
     }
   }
   &__compos:hover &__compos-desc{
@@ -162,6 +163,9 @@
       top: 0;
       left: initial;
       right: 0;
+    }
+    @include phone{
+      right: -2rem;
     }
   }
 
