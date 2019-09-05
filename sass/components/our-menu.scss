@@ -18,18 +18,24 @@
   &__item{
     display: flex;
     height: 100%;
+
   }
   &__item--active &__link{
     color: $color-yellow;
   }
   &__item--active &__desc{
     width: 54rem;
+
     @include tablet{
       width: 30rem;
     }
     @include phone{
       width: 21rem;
     }
+  }
+  &__item--active &__text{
+    opacity: 1;
+    transition: opacity .2s ease .6s;
   }
   &__name{
     width: 8rem;
@@ -59,6 +65,7 @@
     display: block;
     transform:rotate(180deg);
     padding: 4rem 0;
+    transition: all .4s ease;
     @include phone{
       padding: 2rem 0;
     }
@@ -70,8 +77,13 @@
     line-height: 2.4rem;
     font-size: 1.4rem;
     color: $color-white;
+    will-change: width;
+    transition: width .4s ease .2s;
   }
   &__text{
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity .2s ease;
     padding: 5.5rem 3rem;
     @include tablet{
       padding: 2rem;
