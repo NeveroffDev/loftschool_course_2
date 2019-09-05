@@ -5,6 +5,7 @@
   font-size: 1.3rem;
   text-transform: uppercase;
 
+
   &__list {
     display: flex;
     list-style: none;
@@ -48,6 +49,9 @@
     transition: opacity .3s ease;
     @include mediaFix(870px){
       font-size: 1.2rem;
+    }
+    @include mediaFix(775px){
+      font-size: 1.1rem;
     }
     &:hover {
       opacity: .7;

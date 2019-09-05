@@ -87,6 +87,7 @@
     }
   }
 
+
   &__item {
     width: 30rem;
     text-align: center;
@@ -148,9 +149,10 @@
       width: 75%;
     }
   }
+}
 
-
-
+.slider-section{
+  background: linear-gradient($color-yellow 0%, $color-orange-light 50%, $color-yellow 100%);
 }
 
 .section-our-team{

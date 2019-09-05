@@ -9,6 +9,7 @@
     @include mediaFix(850px){
       margin-right: 2rem;
     }
+    z-index: 2000;
   }
   &__buttons{
     display: flex;
