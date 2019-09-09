@@ -1,0 +1,31 @@
+.testimonials-overlay{
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-dark-grey, .92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //transition: opacity .5s ease, visibility 0s .5s;
+  &__box{
+    width: 50%;
+    position: relative;
+    padding: 3rem 2rem;
+    background-color: $color-white;
+    border-radius: 5px;
+
+  }
+  &__heading{
+    margin-bottom: 2rem;
+  }
+  &__text{
+
+  }
+  &__close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
