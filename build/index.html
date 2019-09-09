@@ -104,111 +104,513 @@
                 <div class="slider__wrapper">
 
                     <div class="container container--row">
-                        <button class="slider__arrow">
+                        <button class="slider__arrow slider__left">
                             <svg class="slider__arrow-icon slider__arrow-icon--left">
                                 <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
                             </svg>
                         </button>
-                        <ul class="slider__list">
-                            <li class="slider__item">
-                                <div class="slider__item-right">
-                                    <div class="slider__img-box">
-                                        <div class="slider__compos">
-                                            <svg class="slider__compos-icon">
-                                                <use xlink:href="./img/sprite.svg#icon-burger"/>
-                                            </svg>
-                                            <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
-                                                Состав
+                        <div class="slider__list-wrapper">
+                            <ul class="slider__list">
+                                <li class="slider__item">
+                                    <div class="slider__item-left">
+                                        <div class="slider__img-box">
+                                            <div class="slider__compos">
+                                                <svg class="slider__compos-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-burger"/>
+                                                </svg>
+                                                <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
+                                                    Состав
+                                                </div>
+                                                <div class="slider__compos-desc">
+                                                    <ul class="slider__compos-list">
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-beef"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Говядина</div>
+                                                            <div class="slider__compos-item-weight">300 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-buns"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Булочки</div>
+                                                            <div class="slider__compos-item-weight">100 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-salad"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Зелень</div>
+                                                            <div class="slider__compos-item-weight">70 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-sauce"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Соус</div>
+                                                            <div class="slider__compos-item-weight">150 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cucumber"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Овощи</div>
+
+                                                            <div class="slider__compos-item-weight">200 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cheese"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Сыр</div>
+                                                            <div class="slider__compos-item-weight">80 г</div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button class="close">
+                                                        <div class="close__btn">
+                                                        </div>
+                                                    </button>
+
+                                                </div>
                                             </div>
-                                            <div class="slider__compos-desc">
-                                                <ul class="slider__compos-list">
-                                                    <li class="slider__compos-item">
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-beef"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Говядина</div>
-                                                        <div class="slider__compos-item-weight">300 г</div>
-                                                    </li>
-                                                    <li class="slider__compos-item">
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-buns"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Булочки</div>
-                                                        <div class="slider__compos-item-weight">100 г</div>
-                                                    </li>
-                                                    <li class="slider__compos-item">
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-salad"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Зелень</div>
-                                                        <div class="slider__compos-item-weight">70 г</div>
-                                                    </li>
-                                                    <li class="slider__compos-item">
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-sauce"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Соус</div>
-                                                        <div class="slider__compos-item-weight">150 г</div>
-                                                    </li>
-                                                    <li class="slider__compos-item">
-
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-cucumber"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Овощи</div>
-
-                                                        <div class="slider__compos-item-weight">200 г</div>
-                                                    </li>
-                                                    <li class="slider__compos-item">
-                                                        <svg class="slider__compos-item-icon">
-                                                            <use xlink:href="./img/sprite.svg#icon-cheese"/>
-                                                        </svg>
-                                                        <div class="slider__compos-item-element">Сыр</div>
-                                                        <div class="slider__compos-item-weight">80 г</div>
-                                                    </li>
-
-                                                </ul>
-                                                <button class="close">
-                                                    <div class="close__btn">
-                                                    </div>
-                                                </button>
-
+                                            <img src="./img/slider-burger-1.png" alt="" class="slider__img">
+                                            <div class="slider__calories">
+                                                <svg class="slider__calories-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-kkal"/>
+                                                </svg>
+                                                <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
+                                                    1200
+                                                </div>
+                                                <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
+                                                    ккал
+                                                </div>
                                             </div>
                                         </div>
-                                        <img src="./img/slider-burger-1.png" alt="" class="slider__img">
-                                        <div class="slider__calories">
-                                            <svg class="slider__calories-icon">
-                                                <use xlink:href="./img/sprite.svg#icon-kkal"/>
-                                            </svg>
-                                            <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
-                                                1200
+                                    </div>
+                                    <div class="slider__item-right">
+                                        <div class="slider__desc">
+                                            <h2 class="slider__heading primary-heading primary-heading--white">Dark BEEF
+                                                Burger</h2>
+                                            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом
+                                                из
+                                                100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                                                помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                                чураско.
                                             </div>
-                                            <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
-                                                ккал
+                                            <div class="slider__order">
+                                                <div class="slider__price primary-heading primary-heading--orange">
+                                                    500<span
+                                                        class="slider__currency primary-heading--middle">рублей</span>
+                                                </div>
+                                                <button class="slider__order-bnt btn btn--orange">Заказать</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="slider__item-left">
-                                    <div class="slider__desc">
-                                        <h2 class="slider__heading primary-heading primary-heading--white">Dark BEEF
-                                            Burger</h2>
-                                        <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из
-                                            100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-                                            луком, салатом и соусом гриль теперь с добавлением экзотического соуса
-                                            чураско.
-                                        </div>
-                                        <div class="slider__order">
-                                            <div class="slider__price primary-heading primary-heading--orange">500<span
-                                                    class="slider__currency primary-heading--middle">рублей</span>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__item-left">
+                                        <div class="slider__img-box">
+                                            <div class="slider__compos">
+                                                <svg class="slider__compos-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-burger"/>
+                                                </svg>
+                                                <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
+                                                    Состав
+                                                </div>
+                                                <div class="slider__compos-desc">
+                                                    <ul class="slider__compos-list">
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-beef"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Говядина</div>
+                                                            <div class="slider__compos-item-weight">300 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-buns"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Булочки</div>
+                                                            <div class="slider__compos-item-weight">100 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-salad"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Зелень</div>
+                                                            <div class="slider__compos-item-weight">70 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-sauce"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Соус</div>
+                                                            <div class="slider__compos-item-weight">150 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cucumber"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Овощи</div>
+
+                                                            <div class="slider__compos-item-weight">200 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cheese"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Сыр</div>
+                                                            <div class="slider__compos-item-weight">80 г</div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button class="close">
+                                                        <div class="close__btn">
+                                                        </div>
+                                                    </button>
+
+                                                </div>
                                             </div>
-                                            <button class="slider__order-bnt btn btn--orange">Заказать</button>
+                                            <img src="./img/burger_sandwich.png" alt="" class="slider__img">
+                                            <div class="slider__calories">
+                                                <svg class="slider__calories-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-kkal"/>
+                                                </svg>
+                                                <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
+                                                    1200
+                                                </div>
+                                                <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
+                                                    ккал
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <button class="slider__arrow">
+                                    <div class="slider__item-right">
+                                        <div class="slider__desc">
+                                            <h2 class="slider__heading primary-heading primary-heading--white">Burger
+                                                sandwich</h2>
+                                            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом
+                                                из
+                                                100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                                                помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                                чураско.
+                                            </div>
+                                            <div class="slider__order">
+                                                <div class="slider__price primary-heading primary-heading--orange">
+                                                    500<span
+                                                        class="slider__currency primary-heading--middle">рублей</span>
+                                                </div>
+                                                <button class="slider__order-bnt btn btn--orange">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__item-left">
+                                        <div class="slider__img-box">
+                                            <div class="slider__compos">
+                                                <svg class="slider__compos-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-burger"/>
+                                                </svg>
+                                                <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
+                                                    Состав
+                                                </div>
+                                                <div class="slider__compos-desc">
+                                                    <ul class="slider__compos-list">
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-beef"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Говядина</div>
+                                                            <div class="slider__compos-item-weight">300 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-buns"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Булочки</div>
+                                                            <div class="slider__compos-item-weight">100 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-salad"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Зелень</div>
+                                                            <div class="slider__compos-item-weight">70 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-sauce"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Соус</div>
+                                                            <div class="slider__compos-item-weight">150 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cucumber"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Овощи</div>
+
+                                                            <div class="slider__compos-item-weight">200 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cheese"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Сыр</div>
+                                                            <div class="slider__compos-item-weight">80 г</div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button class="close">
+                                                        <div class="close__btn">
+                                                        </div>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            <img src="./img/Chiken_burger.png" alt="" class="slider__img">
+                                            <div class="slider__calories">
+                                                <svg class="slider__calories-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-kkal"/>
+                                                </svg>
+                                                <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
+                                                    1200
+                                                </div>
+                                                <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
+                                                    ккал
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-right">
+                                        <div class="slider__desc">
+                                            <h2 class="slider__heading primary-heading primary-heading--white">Chiken burger</h2>
+                                            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом
+                                                из
+                                                100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                                                помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                                чураско.
+                                            </div>
+                                            <div class="slider__order">
+                                                <div class="slider__price primary-heading primary-heading--orange">
+                                                    500<span
+                                                        class="slider__currency primary-heading--middle">рублей</span>
+                                                </div>
+                                                <button class="slider__order-bnt btn btn--orange">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__item-left">
+                                        <div class="slider__img-box">
+                                            <div class="slider__compos">
+                                                <svg class="slider__compos-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-burger"/>
+                                                </svg>
+                                                <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
+                                                    Состав
+                                                </div>
+                                                <div class="slider__compos-desc">
+                                                    <ul class="slider__compos-list">
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-beef"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Говядина</div>
+                                                            <div class="slider__compos-item-weight">300 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-buns"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Булочки</div>
+                                                            <div class="slider__compos-item-weight">100 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-salad"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Зелень</div>
+                                                            <div class="slider__compos-item-weight">70 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-sauce"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Соус</div>
+                                                            <div class="slider__compos-item-weight">150 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cucumber"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Овощи</div>
+
+                                                            <div class="slider__compos-item-weight">200 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cheese"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Сыр</div>
+                                                            <div class="slider__compos-item-weight">80 г</div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button class="close">
+                                                        <div class="close__btn">
+                                                        </div>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            <img src="./img/NYC-Diner-Bacon-Cheeseburger.png" alt="" class="slider__img">
+                                            <div class="slider__calories">
+                                                <svg class="slider__calories-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-kkal"/>
+                                                </svg>
+                                                <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
+                                                    1200
+                                                </div>
+                                                <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
+                                                    ккал
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-right">
+                                        <div class="slider__desc">
+                                            <h2 class="slider__heading primary-heading primary-heading--white">NYC Diner Bacon Cheeseburger</h2>
+                                            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом
+                                                из
+                                                100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                                                помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                                чураско.
+                                            </div>
+                                            <div class="slider__order">
+                                                <div class="slider__price primary-heading primary-heading--orange">
+                                                    500<span
+                                                        class="slider__currency primary-heading--middle">рублей</span>
+                                                </div>
+                                                <button class="slider__order-bnt btn btn--orange">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="slider__item">
+                                    <div class="slider__item-left">
+                                        <div class="slider__img-box">
+                                            <div class="slider__compos">
+                                                <svg class="slider__compos-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-burger"/>
+                                                </svg>
+                                                <div class="slider__compos-heading primary-heading primary-heading--white primary-heading--small">
+                                                    Состав
+                                                </div>
+                                                <div class="slider__compos-desc">
+                                                    <ul class="slider__compos-list">
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-beef"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Говядина</div>
+                                                            <div class="slider__compos-item-weight">300 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-buns"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Булочки</div>
+                                                            <div class="slider__compos-item-weight">100 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-salad"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Зелень</div>
+                                                            <div class="slider__compos-item-weight">70 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-sauce"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Соус</div>
+                                                            <div class="slider__compos-item-weight">150 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cucumber"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Овощи</div>
+
+                                                            <div class="slider__compos-item-weight">200 г</div>
+                                                        </li>
+                                                        <li class="slider__compos-item">
+                                                            <svg class="slider__compos-item-icon">
+                                                                <use xlink:href="./img/sprite.svg#icon-cheese"/>
+                                                            </svg>
+                                                            <div class="slider__compos-item-element">Сыр</div>
+                                                            <div class="slider__compos-item-weight">80 г</div>
+                                                        </li>
+
+                                                    </ul>
+                                                    <button class="close">
+                                                        <div class="close__btn">
+                                                        </div>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                            <img src="./img/Spicy_Shrimp_Burger.png" alt="" class="slider__img">
+                                            <div class="slider__calories">
+                                                <svg class="slider__calories-icon">
+                                                    <use xlink:href="./img/sprite.svg#icon-kkal"/>
+                                                </svg>
+                                                <div class="slider__calories-count primary-heading primary-heading--white primary-heading--small">
+                                                    1200
+                                                </div>
+                                                <div class="slider__calories-units primary-heading primary-heading--white primary-heading--small">
+                                                    ккал
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__item-right">
+                                        <div class="slider__desc">
+                                            <h2 class="slider__heading primary-heading primary-heading--white">Spicy Shrimp Burger</h2>
+                                            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом
+                                                из
+                                                100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя
+                                                помидорами,
+                                                луком, салатом и соусом гриль теперь с добавлением экзотического соуса
+                                                чураско.
+                                            </div>
+                                            <div class="slider__order">
+                                                <div class="slider__price primary-heading primary-heading--orange">
+                                                    500<span
+                                                        class="slider__currency primary-heading--middle">рублей</span>
+                                                </div>
+                                                <button class="slider__order-bnt btn btn--orange">Заказать</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="slider__arrow slider__right">
                             <svg class="slider__arrow-icon slider__arrow-icon--right">
                                 <use xlink:href="./img/sprite.svg#icon-arrow-scroll"/>
                             </svg>
@@ -618,7 +1020,7 @@
     </section>
 </div>
 <nav id="full-screen-menu" class="fullscreen-menu">
-   <ul class="fullscreen-menu__list">
+    <ul class="fullscreen-menu__list">
         <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">О нас</a></li>
         <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Бургеры</a></li>
         <li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Команда</a></li>
@@ -646,6 +1048,7 @@
     </ul>
 </aside>
 <script src="js/burger-menu.js"></script>
-<script src="js/menu-accordeon.js"></script>
+<script src="js/menu-accordion.js"></script>
+<script src="js/burger-slider.js"></script>
 </body>
 </html>
