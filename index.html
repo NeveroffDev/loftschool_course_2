@@ -893,40 +893,40 @@
         <div class="container container--row">
             <div class="form">
                 <div class="form__heading primary-heading">Закажите доставку</div>
-                <form action="#" class="form__form-elem">
+                <form action="#" class="form__form-elem"  id="form-order">
                     <div class="form__column">
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__label-text">Имя</div>
-                                <input class="form__input" type="text" id="name">
+                                <input class="form__input" type="text" name="name" required>
                             </label>
                             <label class="form__block">
                                 <div class="form__label-text">Телефон</div>
-                                <input class="form__input" type="text" id="phone">
+                                <input class="form__input" type="text" name="phone" required>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__label-text">Улица</div>
-                                <input class="form__input" type="text" id="street">
+                                <input class="form__input" type="text" name="street">
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__label-text">Дом</div>
-                                <input class="form__input" type="text" id="house">
+                                <input class="form__input" type="text" name="house">
                             </label>
                             <label class="form__block">
                                 <div class="form__label-text">Корпус</div>
-                                <input class="form__input" type="text" id="block">
+                                <input class="form__input" type="text" name="block">
                             </label>
                             <label class="form__block">
                                 <div class="form__label-text">Квартира</div>
-                                <input class="form__input" type="text" id="flat">
+                                <input class="form__input" type="text" name="flat">
                             </label>
                             <label class="form__block form__block--hidden-on-phones">
                                 <div class="form__label-text">Этаж</div>
-                                <input class="form__input" type="text" id="flor">
+                                <input class="form__input" type="text" name="flor">
                             </label>
                         </div>
                     </div>
@@ -934,7 +934,7 @@
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__label-text">Комментарий</div>
-                                <textarea class="form__input form__input--textarea" type="text" id="comment"></textarea>
+                                <textarea class="form__input form__input--textarea" type="text" name="comment" required></textarea>
                             </label>
                         </div>
                         <div class="form__row form__row--no-gap">
@@ -959,7 +959,7 @@
                             </label>
                         </div>
                         <div class="form__row form__row--btns">
-                            <input class="form__input-sub btn btn--orange" type="submit" value="Заказать">
+                            <input class="form__input-sub btn btn--orange" id="form-send-button" type="submit" value="Заказать">
                             <input class="form__input-reset btn btn--transparent" type="reset" value="Очистить">
                         </div>
 
@@ -1063,5 +1063,7 @@
 <script src="js/menu-accordion.js"></script>
 <script src="js/burger-slider.js"></script>
 <script src="js/modals-testimonials.js"></script>
+<script src="js/form-sender.js"></script>
+
 </body>
 </html>

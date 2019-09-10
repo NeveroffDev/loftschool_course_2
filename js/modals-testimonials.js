@@ -9,7 +9,6 @@ section.addEventListener('click', (e) => {
     e.preventDefault();
 
     if (e.target.parentNode.className === 'testimonials__button') {
-        overlay.style.visibility = 'visible';
         overlay.style.animation = 'fadeIn .4s ease both';
         box.style.animation = 'bounceScaleIn .4s ease both';
         heading.textContent = e.target.parentNode.previousElementSibling.previousElementSibling.textContent;
@@ -20,7 +19,6 @@ section.addEventListener('click', (e) => {
 });
 
 function hideOverlay(){
-    overlay.style.visibility = 'hidden';
     overlay.style.opacity = '0';
     document.body.style.overflow = 'initial';
     overlay.style.animation = 'fadeOut .4s ease both';
