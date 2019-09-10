@@ -16,7 +16,7 @@ button.addEventListener('click', (e) => {
         xhr.send(JSON.stringify(FormData));
 
         xhr.addEventListener('load', () => {
-            console.log(xhr.response);
+            console.log(xhr.response.status);
         })
 
 });
