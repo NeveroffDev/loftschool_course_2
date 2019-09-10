@@ -4,7 +4,7 @@ const button = document.getElementById('form-send-button');
 button.addEventListener('click', (e) => {
     e.preventDefault();
     if (validateForm(myForm)) {}
-        const formData = new FormData();
+        const formData = new FormData(myForm);
         formData.append('name', myForm.elements.name.value);
         formData.append('phone', myForm.elements.phone.value);
         formData.append('comment', myForm.elements.comment.value);
