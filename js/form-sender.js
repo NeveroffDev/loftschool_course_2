@@ -31,6 +31,12 @@ function validateForm(form) {
     if (!validateField(myForm.elements.phone)) {
         valid = false;
     }
+    if (!validateField(myForm.elements.street)) {
+        valid = false;
+    }
+    if (!validateField(myForm.elements.house)) {
+        valid = false;
+    }
     if (!validateField(myForm.elements.comment)) {
         valid = false;
     }
@@ -51,12 +57,15 @@ function showModal(message) {
     box.style.animation = 'bounceScaleIn .4s ease both';
     text.textContent = message;
     document.body.style.overflow = 'hidden';
+    overlay.style.visibility = 'visible';
+
 
     function hideOverlay(){
         overlay.style.opacity = '0';
         document.body.style.overflow = 'initial';
         overlay.style.animation = 'fadeOut .4s ease both';
         box.style.animation = 'bounceScaleOut .4s ease both';
+        overlay.style.visibility = 'hidden';
     }
 
     document.addEventListener('keydown', (e) => {

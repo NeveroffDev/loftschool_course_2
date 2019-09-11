@@ -11,6 +11,7 @@ section.addEventListener('click', (e) => {
     if (e.target.parentNode.className === 'testimonials__button') {
         overlay.style.animation = 'fadeIn .4s ease both';
         box.style.animation = 'bounceScaleIn .4s ease both';
+        overlay.style.visibility = 'visible';
         heading.textContent = e.target.parentNode.previousElementSibling.previousElementSibling.textContent;
         text.textContent = e.target.parentNode.previousElementSibling.textContent;
         document.body.style.overflow = 'hidden';
@@ -18,15 +19,16 @@ section.addEventListener('click', (e) => {
     }
 });
 
-function hideOverlay(){
+function hideOverlay() {
     overlay.style.opacity = '0';
     document.body.style.overflow = 'initial';
     overlay.style.animation = 'fadeOut .4s ease both';
     box.style.animation = 'bounceScaleOut .4s ease both';
+    overlay.style.visibility = 'hidden';
 }
 
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape'){
+    if (e.key === 'Escape') {
         hideOverlay();
     }
 
@@ -34,7 +36,7 @@ document.addEventListener('keydown', (e) => {
 
 overlay.addEventListener('click', (e) => {
     if (e.target.className.includes('close')) {
-       hideOverlay();
+        hideOverlay();
     }
 });
 
