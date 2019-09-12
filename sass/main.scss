@@ -1,5 +1,6 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/animations";
 
 @import "base/normalize";
 @import "base/base";
@@ -20,6 +21,10 @@
 @import "components/slider";
 @import "components/close-button";
 @import "components/fullscreen-menu";
+@import "components/testimonials-overlay";
+@import "components/order-overlay";
+
+
 
 @import "layouts/header";
 @import "layouts/footer";
