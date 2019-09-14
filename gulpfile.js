@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
-const sassGlob = require('gulp-scss-glob');
+const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const px2rem = require('gulp-smile-px2rem');
 const gcmq = require('gulp-group-css-media-queries');
@@ -56,7 +56,7 @@ task('svg', () => {
     return src(`${SRC_PATH}/img/svg/*.svg`)
         .pipe(svgo({
             removeAttrs: {
-                attrs: '(fill|stroke|style|width|height|data.*)'
+                attrs: '(width|height|data.*)'
             }
         }))
         .pipe(svgSprite({
@@ -128,6 +128,7 @@ task('watch', () => {
     watch(`./${SRC_PATH}/js/*.js`, series('scripts'));
     watch(`./${SRC_PATH}/*.html`, series('copy:html'));
     watch(`./${SRC_PATH}/img/*.*`, series('copy:img'));
+    watch(`./${SRC_PATH}/styles/fonts/*.*`, series('copy:fonts'));
     watch(`./${SRC_PATH}/img/svg/*.svg`, series('svg'));
 });
 
@@ -135,11 +136,11 @@ task('watch', () => {
 task(
     'default',
     series('clear',
-        parallel('copy:img', 'svg', 'copy:html', 'styles', 'scripts'),
+        parallel('copy:fonts', 'copy:img', 'svg', 'copy:html', 'styles', 'scripts'),
         parallel('server', 'watch')));
 
 task(
     'build',
     series('clear',
-        parallel('copy:img', 'svg', 'copy:html', 'styles', 'scripts'))
+        parallel('copy:fonts', 'copy:img', 'svg', 'copy:html', 'styles', 'scripts'))
 );
