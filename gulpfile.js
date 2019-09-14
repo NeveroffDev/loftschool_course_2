@@ -1,123 +1,145 @@
-const gulp = require('gulp');
-const browserSync = require('browser-sync');
-//const pug = require('gulp-pug');
+const {src, dest, task, series, watch, parallel} = require('gulp');
+const rm = require('gulp-rm');
 const sass = require('gulp-sass');
-//const spritesmith = require('gulp.spritesmith');
-const rimraf = require('rimraf');
-const rename = require('gulp-rename');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
+const sassGlob = require('gulp-scss-glob');
 const autoprefixer = require('gulp-autoprefixer');
+const px2rem = require('gulp-smile-px2rem');
+const gcmq = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const svgo = require('gulp-svgo');
+const svgSprite = require('gulp-svg-sprite');
+const gulpif = require('gulp-if');
 
+//env variable for dev or prod
+const env = process.env.NODE_ENV;
 
+//config
+const {DIST_PATH, SRC_PATH, JS_LIBS, STYLE_LIBS} = require('./gulp.config');
 
-// /*---------Pug compile---------*/
-//
-// gulp.task('pug', function buildHTML() {
-//     return gulp.src('source/template/*.pug')
-//         .pipe(pug({
-//             pretty: true
-//         }))
-//         .pipe(gulp.dest('build'));
-// });
+sass.compiler = require('node-sass');
 
-/*---------Sass compile---------*/
-
-gulp.task('sass', function () {
-    return gulp.src('sass/main.scss')
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(rename('styles.css'))
-        .pipe(gulp.dest('build/css'))
+//clear dist folder
+task('clear', () => {
+    console.log(env);
+    return src(`${DIST_PATH}/**/*`, {read: false}).pipe(rm());
 });
 
-
-// /*---------Sprite Compile---------*/
-//
-// gulp.task('sprite', function (cb) {
-//     const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
-//         imgName: 'sprite.png',
-//         imgPath: '../images/sprite.png',
-//         cssName: 'sprite.scss'
-//     }));
-//     spriteData.img.pipe(gulp.dest('build/images/'));
-//     spriteData.css.pipe(gulp.dest('source/styles/global/'));
-//     cb();
-// });
-
-
-/*---------Clear Build Directory---------*/
-
-gulp.task('clear', function del(cb) {
-    return rimraf('build', cb);
+//copy html
+task('copy:html', () => {
+    return src(`${SRC_PATH}/index.html`)
+        .pipe(dest(DIST_PATH))
+        .pipe(reload({stream: true}));
 });
 
+//copy img
+task('copy:img', () => {
+    return src(`${SRC_PATH}/img/*.*`)
+        .pipe(dest(`${DIST_PATH}/img`))
+        .pipe(reload({stream: true}));
+});
 
-/*---------BrowserSync---------*/
-gulp.task('server', function () {
+//copy fonts
+task('copy:fonts', () => {
+    return src(`${SRC_PATH}/styles/fonts/*.*`)
+        .pipe(dest(`${DIST_PATH}/css/fonts`))
+        .pipe(reload({stream: true}));
+});
+
+//SVG
+task('svg', () => {
+    return src(`${SRC_PATH}/img/svg/*.svg`)
+        .pipe(svgo({
+            removeAttrs: {
+                attrs: '(fill|stroke|style|width|height|data.*)'
+            }
+        }))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: '../sprite.svg'
+                }
+            }
+        }))
+        .pipe(dest(`${DIST_PATH}/img/svg`))
+});
+
+//compile scss files
+task('styles', () => {
+    return src([...STYLE_LIBS, `${SRC_PATH}/styles/scss/main.scss`])
+        .pipe(gulpif(env === 'dev',
+            sourcemaps.init()))
+        .pipe(concat('main.min.scss'))
+        .pipe(sassGlob())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(px2rem({
+            dpr: 1,
+            rem: 16,
+            one: false
+        }))
+        .pipe(gulpif(env === 'prod',
+            autoprefixer({
+                cascade: false
+            })))
+        .pipe(gulpif(env === 'prod',
+            gcmq()))
+        .pipe(gulpif(env === 'prod',
+            cleanCSS()))
+        .pipe(gulpif(env === 'dev',
+            sourcemaps.write()))
+        .pipe(dest(`${DIST_PATH}/css`))
+        .pipe(reload({stream: true}));
+});
+
+//compile JS scripts
+task('scripts', () => {
+    return src([...JS_LIBS, `${SRC_PATH}/js/*.js`])
+        .pipe(gulpif(env === 'dev',
+            sourcemaps.init()))
+        .pipe(concat('main.min.js', {newLine: ';'}))
+        .pipe(gulpif(env === 'prod',
+            babel({
+                presets: ['@babel/env']
+            })))
+        .pipe(gulpif(env === 'prod',
+            uglify()))
+        .pipe(gulpif(env === 'dev',
+            sourcemaps.write()))
+        .pipe(dest(`${DIST_PATH}/js`))
+        .pipe(reload({stream: true}));
+});
+
+//create a dev server
+task('server', function () {
     browserSync.init({
         server: {
-            port: 9000,
-            baseDir: "build"
-        }
+            baseDir: `./${DIST_PATH}`
+        },
+        open: false
     });
-
-    gulp.watch('build/**/*').on('change', browserSync.reload);
 });
-
-/*---------Copy Fonts---------*/
-gulp.task('copy:fonts', function () {
-    return gulp.src('./fonts/**/*.*')
-        .pipe(gulp.dest('build/css/fonts'));
-});
-
-/*---------Copy Images---------*/
-gulp.task('copy:images', function () {
-    return gulp.src('./img/**/*.*')
-        .pipe(gulp.dest('build/img'));
-});
-
-/*---------Copy JS---------*/
-gulp.task('copy:scripts', function () {
-    return gulp.src('./js/**/*.*')
-        .pipe(gulp.dest('build/js'));
-});
-
-/*---------Copy HTML---------*/
-gulp.task('copy:html', function () {
-    return gulp.src('./index.html')
-        .pipe(gulp.dest('build'));
+task('watch', () => {
+    watch(`./${SRC_PATH}/styles/**/*.scss`, series('styles'));
+    watch(`./${SRC_PATH}/js/*.js`, series('scripts'));
+    watch(`./${SRC_PATH}/*.html`, series('copy:html'));
+    watch(`./${SRC_PATH}/img/*.*`, series('copy:img'));
+    watch(`./${SRC_PATH}/img/svg/*.svg`, series('svg'));
 });
 
 
-/*---------Copy ALL---------*/
-gulp.task('copy', gulp.parallel('copy:fonts','copy:images'));
+task(
+    'default',
+    series('clear',
+        parallel('copy:img', 'svg', 'copy:html', 'styles', 'scripts'),
+        parallel('server', 'watch')));
 
-
-/*---------AutoPrefixer---------*/
-gulp.task('prefixer', () =>
-    gulp.src('build/css/styles.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('build/css/'))
+task(
+    'build',
+    series('clear',
+        parallel('copy:img', 'svg', 'copy:html', 'styles', 'scripts'))
 );
-
-/*---------Watchers---------*/
-
-gulp.task('watch', function () {
-    gulp.watch('index.html', gulp.series('copy:html'));
-    gulp.watch('js/**/*.js', gulp.series('copy:scripts'));
-   // gulp.watch('source/template/**/*.pug', gulp.series('pug'));
-    gulp.watch('sass/**/*.scss', gulp.series('sass', 'prefixer'));
-});
-
-/*---------Default---------*/
-
-gulp.task('default', gulp.series(
-    'clear',
-    gulp.parallel('copy:html','copy:scripts', 'sass', 'copy'),
-    gulp.parallel('prefixer'),
-    gulp.parallel('watch', 'server')
-));
-
-
-
