@@ -58,7 +58,7 @@
         });
 
         function isDark(screen) {
-            if (screen === 1 || screen === 7) {
+            if (screen === 1 || screen === 7 || screen === 8) {
                 sideItems.addClass('side-nav__item--dark');
             } else {
                 sideItems.removeClass('side-nav__item--dark');
