@@ -11,6 +11,7 @@
 
 
         sideItems.on('click', function (e) {
+            e.preventDefault();
             if (notOverlay()) {
                 screen = sideItems.index(this);
                 sideItems.removeClass('side-nav__item--active');
