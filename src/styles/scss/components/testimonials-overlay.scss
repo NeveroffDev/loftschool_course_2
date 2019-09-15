@@ -8,7 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //transition: opacity .5s ease, visibility 0s .5s;
+  z-index: 1000;
+  //transition: visibility 0s .5s;
   &__box{
     width: 50%;
     position: relative;

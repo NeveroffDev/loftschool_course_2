@@ -57,6 +57,7 @@
         text.textContent = message;
         document.body.style.overflow = 'hidden';
         overlay.style.visibility = 'visible';
+        overlay.style.transition = 'visibility 0s';
 
 
         function hideOverlay() {
@@ -65,6 +66,7 @@
             overlay.style.animation = 'fadeOut .4s ease both';
             box.style.animation = 'bounceScaleOut .4s ease both';
             overlay.style.visibility = 'hidden';
+            overlay.style.transition = 'visibility 0s .4s';
         }
 
         document.addEventListener('keydown', (e) => {

@@ -18,9 +18,10 @@
     height: 1.8rem;
     border: 1px solid transparent;
     border-radius: 50%;
-    transition: border-color .4s ease;
+    transition: border-color .3s ease;
     &--active, &:hover{
       border-color: $color-white;
+      transition: border-color .3s ease;
     }
     &:before {
         content: '';
@@ -32,8 +33,21 @@
         height: .6rem;
         background-color: $color-white;
         border-radius: 50%;
+        transition:  background-color 1s ease-in-out;
     }
   }
+
+  &__item--dark{
+    &:hover, &.side-nav__item--active{
+      border-color: $color-dark-grey;
+      transition: border-color .3s ease-in-out;
+    }
+    &:before {
+      background-color: $color-dark-grey;
+      transition: background-color 1s ease-in-out;
+    }
+  }
+
 
   &__item--active &__link {
     cursor: auto;
