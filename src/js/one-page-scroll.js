@@ -44,7 +44,7 @@
                     pages.eq(screen).addClass('active').siblings().removeClass('active');
                     isDark(screen);
                     sideItems.eq(screen).addClass('side-nav__item--active').siblings().removeClass('side-nav__item--active');
-                    console.log(sideItems.eq(screen));
+
                     container.css({
                         'top': position
                     });
