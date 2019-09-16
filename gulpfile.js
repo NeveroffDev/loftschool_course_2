@@ -77,11 +77,11 @@ task('styles', () => {
         .pipe(concat('main.min.scss'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem({
-            dpr: 1,
-            rem: 16,
-            one: false
-        }))
+        // .pipe(px2rem({
+        //     dpr: 1,
+        //     rem: 16,
+        //     one: false
+        // }))
         .pipe(gulpif(env === 'prod',
             autoprefixer({
                 cascade: false
