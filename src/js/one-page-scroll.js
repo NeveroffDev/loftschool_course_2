@@ -5,6 +5,7 @@
         let pages = $('.section');
         let inscrol = false;
         const body = $('body');
+        const sections = $('.section:not(:last-child)');
         const container = $('.main-content');
         const sideItems = $('.side-nav__item');
         const overlayTest = $('.testimonials-overlay');
@@ -46,7 +47,7 @@
         });
 
         //for mobile swipe
-        body.swipe( {
+        sections.swipe( {
             swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
                 if(direction === 'down'){
                     scrollEventHandler(true);
