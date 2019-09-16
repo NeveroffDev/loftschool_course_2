@@ -4,11 +4,24 @@
         let screen = 0;
         let pages = $('.section');
         let inscrol = false;
+        const body = $('body');
         const container = $('.main-content');
         const sideItems = $('.side-nav__item');
         const overlayTest = $('.testimonials-overlay');
         const overlayOrder = $('.order-overlay');
+        const scrollDownLink = $('.intro-section__scroll-down-link');
 
+        scrollDownLink.on('click', function (e) {
+            e.preventDefault();
+            screen++;
+            let position = (-100) + '%';
+            container.css({
+                'top': position
+            });
+            isDark(1);
+            sideItems.removeClass('side-nav__item--active');
+            sideItems.eq(1).addClass('side-nav__item--active');
+        });
 
         sideItems.on('click', function (e) {
             e.preventDefault();
@@ -27,12 +40,33 @@
 
         $('.page:first-child').addClass('active');
 
-        $('body').on('mousewheel', function (e) {
+        body.on('wheel', function (e) {
+            let condition = e.originalEvent.deltaY < 0;
+            scrollEventHandler(condition);
+        });
+
+        //for mobile swipe
+        body.swipe( {
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                if(direction === 'down'){
+                    scrollEventHandler(true);
+                }
+                if(direction === 'up'){
+                    scrollEventHandler(false);
+                }
+            },
+            threshold: 150,
+            maxTimeThreshold: 5000,
+            fingers: 'all'
+        });
+
+
+        function scrollEventHandler(cond) {
             if (notOverlay()) {
                 let activePage = pages.filter('.active');
                 if (!inscrol) {
                     inscrol = true;
-                    if (e.deltaY > 0) {
+                    if (cond) {
                         if (activePage.prev().length) {
                             screen--;
                         }
@@ -41,7 +75,7 @@
                             screen++;
                         }
                     }
-                    let position = (-screen * 100) + '%';
+                    let position = (-screen * 100) + 'vh';
                     pages.eq(screen).addClass('active').siblings().removeClass('active');
                     isDark(screen);
                     sideItems.eq(screen).addClass('side-nav__item--active').siblings().removeClass('side-nav__item--active');
@@ -55,7 +89,7 @@
                 }
 
             }
-        });
+        }
 
         function isDark(screen) {
             if (screen === 1 || screen === 7 || screen === 8) {

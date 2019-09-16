@@ -20,6 +20,7 @@ html{
 }
 
 body{
+  touch-action: none; //for mobile swipes fix
   font-size: 1.4rem;
   line-height: 2.4rem;
   box-sizing: border-box;
