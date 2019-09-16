@@ -10,7 +10,6 @@
 
     audioProgress.addEventListener('click', e => {
         const position = e.offsetX / audioProgress.offsetWidth;
-        console.log(video.volume);
         audioProgressPicker.style.left = (position * 95) + '%';
         video.volume = position;
     });
@@ -42,9 +41,13 @@
         if(video.muted){
             video.muted = false;
             sound.classList.remove(activeClass);
+            audioProgressPicker.style.left = '95%';
+            video.volume = 1;
+
         }else{
             video.muted = true;
             sound.classList.add(activeClass);
+            audioProgressPicker.style.left = 0;
         }
     });
 
