@@ -141,6 +141,7 @@
 
         orderBtn.on('click', function (e) {
             e.preventDefault();
+            screen = 6;
             scrollOnScreen(6);
         });
 
