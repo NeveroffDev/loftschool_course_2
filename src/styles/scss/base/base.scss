@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  //define what is 1 rem
+  font-size: 62.5%;
+
+  @include tablet{
+    font-size: 56.25%;
+  }
+  @include phone{
+    font-size: 50%;
+  }
+  font-family: ubuntulight, sans-serif;
+  height: 100%;
+}
+
+body{
+  touch-action: none; //for mobile swipes fix
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.wrapper{
+  overflow: hidden;
+  height: 100%;
+}
+.main-content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  transition: top .8s ease-in-out;
+}
+.container{
+  height: 100%;
+  width: 95%;
+  max-width: 94rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  &--align-start{
+    align-items: start;
+  }
+  &--row{
+    flex-direction: row;
+  }
+  @include phone{
+    width: 90%;
+  }
+}
+
+ul{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+a{
+  text-decoration: none;
+  color: $color-white;
+}
