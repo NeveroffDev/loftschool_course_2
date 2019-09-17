@@ -25,7 +25,6 @@
 
         mobileNavItems.on('click', function (e) {
             e.preventDefault();
-            console.log(this);
             navigationMenu(mobileNavItems, this);
             fullScreenMenuClose(fullScreenMenu);
         });
@@ -53,7 +52,6 @@
         disableMapSwipe();//disabled map swipe for desktop on initialize
 
         $(window).resize(function () {//disabled map swipe for desktop on resize window
-            console.log(window.innerWidth);
             disableMapSwipe();
         });
 
