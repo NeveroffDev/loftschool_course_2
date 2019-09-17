@@ -10,7 +10,7 @@
   transition: all .3s ease;
   outline: none;
   cursor: pointer;
-
+  z-index: 1000;
   &--orange{
     background-color: $color-orange;
     &:hover{
